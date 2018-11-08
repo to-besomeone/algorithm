@@ -5,15 +5,10 @@ for _ in range(T):
     M, N, x, y = list(map(int, input().split(' ')))
     ans = x
     ax = x
-
-    ay = x%N
+    ay = x % N
     if ay == 0:
         ay += N
-
-    if M > N:
-        ri = M-N
-    else:
-        ri = M
+    ri = M % N
 
     width = (M*N) // math.gcd(M, N) // M
 
@@ -26,7 +21,6 @@ for _ in range(T):
             if ay == 0:
                 ay += N
         ans += M
-
         width -= 1
 
     if ax == x and ay == y:
