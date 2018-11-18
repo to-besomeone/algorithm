@@ -1,4 +1,4 @@
-from sys import stdin
+
 num= int(input())
 alist=[]
 for case in range(num):
